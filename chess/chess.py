@@ -700,7 +700,7 @@ header.pack()
 body = Frame()
 body.pack(expand=True, fill='both')
 
-state_label = Label(header, text='Turn: White', font='나눔고딕 20')
+state_label = Label(header, text='Turn: White', font=('맑은 고딕', 20))
 
 f = f'TkDefaultFont {ICON_SIZE}'
 dead = {Color.WHITE: Label(body, font=f, anchor='nw'),
@@ -710,9 +710,9 @@ dead[Color.BLACK].place(width=BOARD_SIZE)
 
 board = Board(body, db, state_label, dead)
 
-board.reset_btn = Button(header, text='RESET', font='나눔고딕 20', command=board.reset)
+board.reset_btn = Button(header, text='RESET', font=('맑은 고딕', 20), command=board.reset)
 
-board.undo_btn = Button(header, text='봐줘', font='나눔고딕 20', command=board.undo)
+board.undo_btn = Button(header, text='봐줘', font=('맑은 고딕', 20), command=board.undo)
 
 board.reset_btn.pack(side='left')
 state_label.pack(side='left', padx = 50)

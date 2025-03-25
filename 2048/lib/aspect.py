@@ -7,7 +7,7 @@ def configure(e):
     tk = e.widget
 
     if (tk.width, tk.height) == (e.width, e.height):
-       return
+        return
 
     if tk.width == e.width:
         tk.height = e.height
